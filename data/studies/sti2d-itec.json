@@ -1,0 +1,41 @@
+{
+  "slug": "sti2d-itec",
+  "period": "2014 – 2017",
+  "role": {
+    "fr": "Bac technologique STI2D — spécialité ITEC",
+    "en": "Technological Baccalaureate STI2D — ITEC specialty"
+  },
+  "org": "Lycée Ozanam",
+  "where": { "fr": "Lille, FR", "en": "Lille, FR" },
+  "summary": {
+    "fr": "Parcours axé sur l’innovation technologique et l’éco-conception : démarche de projet, CAO/DAO, choix matériaux et procédés, et intégration dans une approche durable.",
+    "en": "Track focused on technological innovation and eco-design: project approach, CAD, materials/process selection, with a sustainable mindset."
+  },
+  "topics": {
+    "fr": [
+      "Innovation technologique et éco-conception (ITEC)",
+      "CAO/DAO, modélisation",
+      "Matériaux, procédés de fabrication",
+      "Énergie/systèmes, démarche d’ingénierie",
+      "Projet de conception"
+    ],
+    "en": [
+      "Technological innovation & eco-design",
+      "CAD/Modeling",
+      "Materials & manufacturing processes",
+      "Energy/systems, engineering approach",
+      "Design project"
+    ]
+  },
+  "projects": {
+    "fr": ["Projet ITEC (conception & prototypage)"],
+    "en": ["ITEC design & prototyping project"]
+  },
+  "links": [
+    { "label": "Lycée Ozanam — Bac STI2D", "href": "https://www.groupe-oec.fr/formations/baccalaureat-sciences-et-technologies-de-lindustrie-et-du-developpement-durable/" },
+    { "label": "Présentation STI2D (ex. Ozanam)", "href": "https://ozanam.bzh/formations/bac-sti2d/" },
+    { "label": "Onisep — Bac STI2D à Ozanam (réf établissement)", "href": "https://www.onisep.fr/ressources/structures-enseignement/hauts-de-france/nord/lycee-ozanam/bac-techno-sti2d-sciences-et-technologies-de-l-industrie-et-du-developpement-durable-enseignement-specifique-innovation-technologique-et-eco-concep" }
+  ],
+  "logo": { "href": "https://www.groupe-oec.fr" },
+  "brand": {}
+}

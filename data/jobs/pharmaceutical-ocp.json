@@ -1,0 +1,34 @@
+{
+  "slug": "pharmaceutical-ocp",
+  "period": "2015 (Juin)",
+  "role": {
+    "fr": "Assistant Maintenance",
+    "en": "Maintenance Assistant"
+  },
+  "org": "OCP Pharmaceutique",
+  "where": { "fr": "Villeneuve-d’Ascq, FR", "en": "Villeneuve-d’Ascq, FR" },
+  "summary": {
+    "fr": "Maintenance d’équipements de conditionnement et convoyage en environnement pharmaceutique (GxP). Travail en équipe et traçabilité stricte.",
+    "en": "Maintenance of packaging and conveyor equipment in a pharmaceutical environment (GxP). Team-based work with strict traceability."
+  },
+  "missions": {
+    "fr": [
+      "Assistance maintenance sur lignes (réglages, courroies, capteurs, convoyeurs).",
+      "Changements de format et redémarrage en cadence.",
+      "Application SOP, hygiène/sécurité, consignations et enregistrements.",
+      "Support équipes sur incidents et réduction des micro-arrêts."
+    ],
+    "en": [
+      "Maintenance assistance on lines (adjustments, belts, sensors, conveyors).",
+      "Format changes and production ramp-up.",
+      "Applied SOP, hygiene/safety rules, lock-out and records.",
+      "Supported teams on incidents and reduced micro-stops."
+    ]
+  },
+  "tech": ["Packaging lines", "Conveyors", "Sensors", "SOP/GxP", "CMMS basics"],
+  "links": [
+    { "label": "OCP Répartition – Site", "href": "https://www.ocp.fr" }
+  ],
+  "logo": { "href": "https://www.ocp.fr" },
+  "brand": {}
+}

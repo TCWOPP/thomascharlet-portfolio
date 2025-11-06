@@ -1,0 +1,63 @@
+{
+  "slug": "ocy-technologies",
+  "period": "2022 – Présent",
+  "role": {
+    "fr": "Consultant Ingénierie & Tests — Systèmes ferroviaires",
+    "en": "Engineering & Test Consultant — Railway Systems"
+  },
+  "org": "OCY Technologies (Groupe IKOS)",
+  "where": { "fr": "France (hybride, missions nationales)", "en": "France (hybrid, national assignments)" },
+
+  "summary": {
+    "fr": "Ingénieur technicien au sein d’OCY Technologies, filiale du groupe IKOS Consulting. Conception et mise au point de bancs de tests et de solutions logicielles pour la validation de systèmes électroniques embarqués ferroviaires. Développement d’outils Python/C, automatisation de séquences TestStand, intégration bus CAN et RS485, et création d’interfaces web embarquées.",
+    "en": "Engineer at OCY Technologies (IKOS Group). Involved in design and development of test benches and software tools for validation of embedded electronic railway systems. Developed Python/C tools, automated TestStand sequences, integrated CAN and RS485 buses, and built embedded web interfaces."
+  },
+
+  "missions": {
+    "fr": [
+      "Conception, intégration et maintenance de bancs de tests électroniques.",
+      "Développement d’outils de test et scripts Python/C pour l’analyse des trames CAN/RS485.",
+      "Automatisation de séquences de validation (TestStand, LabVIEW, scripts CLI).",
+      "Développement d’un mini serveur web embarqué (Ethernet W5500) pour visualisation de trames.",
+      "Création d’interfaces de diagnostic et tableaux de bord en HTML/JS.",
+      "Rédaction de documentations techniques, procédures qualité et rapports de test.",
+      "Support atelier : diagnostic matériel, câblage, mise en service."
+    ],
+    "en": [
+      "Design, integration and maintenance of electronic test benches.",
+      "Development of Python/C tools for CAN/RS485 frame analysis.",
+      "Automation of validation sequences (TestStand, LabVIEW, CLI scripts).",
+      "Implementation of an embedded web server (Ethernet W5500) for real-time frame visualization.",
+      "Creation of diagnostic interfaces and HTML/JS dashboards.",
+      "Technical documentation, quality procedures, and test reporting.",
+      "Workshop support: hardware diagnostics, wiring, commissioning."
+    ]
+  },
+
+  "tech": [
+    "Python", "C/C++",
+    "NI TestStand", "LabVIEW","JTAG",
+    "Web (HTML/CSS/JavaScript)", "PowerShell/Batch"
+  ],
+
+  "projects": {
+    "fr": [
+      "Développement du projet PASSERELLE — sniffer multi-protocoles (CAN/RS485) avec interface web et export CSV.",
+      "Création d’un logger Python multi-ports pour supervision industrielle.",
+      "Industrialisation de bancs de tests pour équipements embarqués ferroviaires."
+    ],
+    "en": [
+      "Development of PASSERELLE project — multi-protocol sniffer (CAN/RS485) with web UI and CSV export.",
+      "Built a multi-port Python logger for industrial supervision.",
+      "Bench industrialization for embedded railway equipment validation."
+    ]
+  },
+
+  "links": [
+    { "label": "OCY Technologies — Site officiel", "href": "https://www.ocytechnologies.fr" },
+    { "label": "Groupe IKOS Consulting", "href": "https://www.ikosconsulting.com" }
+  ],
+
+  "logo": { "href": "https://www.ocytechnologies.fr" },
+  "brand": {}
+}

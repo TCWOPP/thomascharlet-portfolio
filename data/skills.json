@@ -1,0 +1,23 @@
+{
+  "languages": ["C", "C++", "Python", "HTBasic", "Java"],
+  "tools": ["SolidWorks", "Unity Pro", "SEE Electrical", "Siemens TIA", "LTspice", "KiCad", "Proteus", "Photoshop"],
+  "domains": {
+    "fr": [
+      "Maintenance électro/auto",
+      "Automatismes & réseaux industriels",
+      "Électronique & électricité",
+      "Mécatronique",
+      "Pneumatique",
+      "Hydraulique"
+    ],
+    "en": [
+      "Electrical/automation maintenance",
+      "Industrial networks & PLCs",
+      "Electronics & electrical",
+      "Mechatronics",
+      "Pneumatics",
+      "Hydraulics"
+    ]
+  },
+  "certifications": ["B2V ESSAI", "BE MESURE", "VERIFICATION", "ESSAI", "BR", "BC"]
+}

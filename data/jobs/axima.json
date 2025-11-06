@@ -1,0 +1,38 @@
+{
+  "slug": "axima",
+  "period": "2023 (janvier) – 2023 (Juin)",
+  "role": {
+    "fr": "Technicien de maintenance CVC (HVAC)",
+    "en": "HVAC Maintenance Technician"
+  },
+  "org": "Axima (ENGIE Solutions)",
+  "where": { "fr": "France (multi-sites)", "en": "France (multi-site)" },
+  "summary": {
+    "fr": "Maintenance préventive/corrective CVC sur sites tertiaires : CTA, groupes froids, chaudières, VMC, détentes directes. Suivi GMAO, sécurité, reporting énergie.",
+    "en": "Preventive/corrective HVAC maintenance on commercial sites: AHUs, chillers, boilers, extract/ventilation. CMMS follow-up, safety, and energy reporting."
+  },
+  "missions": {
+    "fr": [
+      "Maintenance préventive et curative sur CTA, PAC, groupes froids, chaudières et réseaux hydrauliques.",
+      "Diagnostic électrotechnique (armoires, variateurs, sondes) et remise en service après panne.",
+      "Réglages régulation/GTB (consignes, plages horaires, courbes loi d’eau).",
+      "Mesures (ΔP filtres, ΔT échangeurs), équilibrages aérauliques simples.",
+      "Tenue à jour GMAO, fiches d’intervention, plan de prévention et consignations électriques.",
+      "Suivi indicateurs énergie et proposition d’actions correctives simples."
+    ],
+    "en": [
+      "Preventive/corrective maintenance on AHUs, heat pumps, chillers, boilers and hydraulic networks.",
+      "Electrical diagnostics (panels, drives, sensors) and commissioning after faults.",
+      "Controls/BMS tuning (setpoints, schedules, heating curves).",
+      "Measurements (filter ΔP, exchanger ΔT) and basic airflow balancing.",
+      "CMMS updates, intervention sheets, safety permits and lock-out/tag-out.",
+      "Track energy KPIs and propose simple corrective actions."
+    ]
+  },
+  "tech": ["HVAC", "BMS/GTB", "Electrotechnics", "VSD", "CMMS/GMAO", "Safety LOTO", "Energy KPIs", "Hand/Power Tools"],
+  "links": [
+    { "label": "ENGIE Solutions – CVC", "href": "https://www.equans.fr/nos-solutions/refrigeration/solutions-bas-carbone" }
+  ],
+  "logo": { "href": "https://www.equans.fr/" },
+  "brand": {}
+}

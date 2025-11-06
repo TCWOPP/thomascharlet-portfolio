@@ -1,0 +1,50 @@
+{
+  "slug": "deltech",
+  "period": "2020 – 2021",
+  "role": {
+    "fr": "Technicien Électronique en Alternance",
+    "en": "Electronics Technician (Apprenticeship)"
+  },
+  "org": "Deltech",
+  "where": { "fr": "Lille, FR", "en": "Lille, FR" },
+
+  "summary": {
+    "fr": "Alternance en conception, intégration et tests de cartes électroniques pour systèmes embarqués. Participation au développement, à la validation et au suivi qualité de cartes de puissance et de contrôle.",
+    "en": "Apprenticeship in design, integration and testing of electronic boards for embedded systems. Contributed to development, validation and quality tracking of power and control boards."
+  },
+
+  "missions": {
+    "fr": [
+      "Participation à la conception et à l’assemblage de cartes de commande (alimentation, signaux, relais).",
+      "Réalisation de soudures CMS/TH et intégration mécanique dans coffrets.",
+      "Mesures électriques (oscilloscope, multimètre, alimentation de labo) et diagnostic de pannes.",
+      "Tests fonctionnels, calibration et validation sous charge.",
+      "Création de fiches de test et reporting technique pour le bureau d’étude.",
+      "Mise à jour documentation technique et support à l’industrialisation."
+    ],
+    "en": [
+      "Assisted in the design and assembly of control boards (power supply, signals, relays).",
+      "Performed SMD/TH soldering and mechanical integration in enclosures.",
+      "Electrical measurements (oscilloscope, multimeter, lab PSU) and fault diagnosis.",
+      "Functional testing, calibration and validation under load.",
+      "Wrote test sheets and technical reports for the design office.",
+      "Updated technical documentation and supported industrialization."
+    ]
+  },
+
+  "tech": [
+    "Soldering SMD/TH", "Electronics testing", "Oscilloscope", "Multimeter",
+    "Power supply", "PCB assembly", "Debugging", "Python basics", "Technical documentation"
+  ],
+
+  "links": [
+    { "label": "Deltech — Site officiel", "href": "https://www.deltech.tm.fr/fr/" }
+  ],
+
+  "logo": {
+    "href": "https://www.deltech.tm.fr/fr/",
+    "alt": "Deltech"
+  },
+
+  "brand": {}
+}

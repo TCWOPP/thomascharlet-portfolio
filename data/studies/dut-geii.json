@@ -1,0 +1,49 @@
+{
+  "slug": "dut-geii",
+  "period": "2019 – 2021",
+  "role": {
+    "fr": "DUT GEII — Génie Électrique et Informatique Industrielle",
+    "en": "DUT GEII — Electrical Engineering & Industrial Computing"
+  },
+  "org": "IUT (GEII)",
+  "where": { "fr": "France", "en": "France" },
+  "summary": {
+    "fr": "Formation généraliste aux fondamentaux de l’électronique et de l’informatique industrielle : de la conversion d’énergie et l’automatisation jusqu’aux systèmes embarqués et aux réseaux.",
+    "en": "Generalist training in electronics and industrial computing: from power conversion and automation to embedded systems and networks."
+  },
+  "topics": {
+    "fr": [
+      "Électronique analogique/numérique",
+      "Informatique industrielle, systèmes embarqués",
+      "Automatisme, commande/contrôle",
+      "Électronique de puissance",
+      "Réseaux industriels et communication",
+      "Mesures, instrumentation"
+    ],
+    "en": [
+      "Analog/digital electronics",
+      "Industrial computing, embedded systems",
+      "Automation, control",
+      "Power electronics",
+      "Industrial networks & communication",
+      "Measurement & instrumentation"
+    ]
+  },
+  "projects": {
+    "fr": [
+      "Projets tuteurés (automatisme, IoT, instrumentation)",
+      "Stage en milieu industriel (S4)"
+    ],
+    "en": [
+      "Tutored projects (automation, IoT, instrumentation)",
+      "Industry internship (semester 4)"
+    ]
+  },
+  "links": [
+    { "label": "BUT/GEII – Parcours & secteurs (site national)", "href": "https://but-geii.fr/les-parcours/" },
+    { "label": "Exemple de programme GEII (UPEC)", "href": "https://www.u-pec.fr/fr/formation/but-genie-electrique-et-informatique-industrielle-geii" },
+    { "label": "Programme national GEII (réfs)", "href": "https://www-iut.univ-lehavre.fr/category/geii/programme-national-geii/" }
+  ],
+  "logo": { "href": "https://but-geii.fr" },
+  "brand": {}
+}

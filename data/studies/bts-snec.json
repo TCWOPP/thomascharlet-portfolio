@@ -1,0 +1,46 @@
+{
+  "slug": "bts-snec",
+  "period": "2017 – 2019",
+  "role": {
+    "fr": "BTS Systèmes numériques — option Électronique et Communications (EC)",
+    "en": "BTS Digital Systems — Electronics & Communications option"
+  },
+  "org": "Campus Sup’ Ozanam (Lille)",
+  "where": { "fr": "Lille, FR", "en": "Lille, FR" },
+  "summary": {
+    "fr": "BTS orienté conception, pré-industrialisation et maintenance de dispositifs électroniques communicants, avec mise en œuvre des télécommunications en couches basses.",
+    "en": "BTS focused on design, pre-industrialization and maintenance of connected electronic devices, with low-level telecom implementation."
+  },
+  "topics": {
+    "fr": [
+      "Conception et intégration de systèmes électroniques",
+      "Composants complexes, FPGA/SoC",
+      "Télécommunications (couches basses)",
+      "Mesure, test, maintenance",
+      "Programmation embarquée de base"
+    ],
+    "en": [
+      "Electronic systems design & integration",
+      "Complex devices, FPGA/SoC",
+      "Telecoms (lower layers)",
+      "Measurement, testing, maintenance",
+      "Basic embedded programming"
+    ]
+  },
+  "projects": {
+    "fr": [
+      "TP systèmes communicants",
+      "Intégration et validation sur maquettes"
+    ],
+    "en": [
+      "Labs on communicating systems",
+      "Integration & validation on benches"
+    ]
+  },
+  "links": [
+    { "label": "Fiche officielle — BTS Systèmes numériques (éduscol)", "href": "https://sti.eduscol.education.fr/formations/bts-systemes-numeriques" },
+    { "label": "RNCP — BTS Systèmes numériques option EC", "href": "https://www.francecompetences.fr/recherche/rncp/20690/" }
+  ],
+  "logo": { "href": "https://www.groupe-oec.fr" },
+  "brand": {}
+}

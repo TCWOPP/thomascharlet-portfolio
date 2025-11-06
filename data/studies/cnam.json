@@ -1,0 +1,82 @@
+{
+  "slug": "cnam",
+  "period": "2023 – Présent",
+  "role": {
+    "fr": "Diplôme d’ingénieur — Systèmes électroniques (en cours)",
+    "en": "Engineering degree — Electronic Systems (ongoing)"
+  },
+  "org": "Cnam",
+  "where": { "fr": "Toulouse / Paris (FR)", "en": "Toulouse / Paris (FR)" },
+
+  "summary": {
+    "fr": "Parcours ingénieur orienté conception de systèmes électroniques complexes et intégrés (embarqué, traitement du signal, réseaux/communications, tests et production), avec une forte dimension professionnalisante.",
+    "en": "Engineering track focused on designing complex integrated electronic systems (embedded, signal processing, networks/communications, testing & production), with strong professional orientation."
+  },
+
+  "meta": {
+    "code": "CYC9600A",
+    "ects": 180,
+    "entry_level": "Niveau 5 (Bac+2)",
+    "exit_level": "Niveau 7 (Bac+5)",
+    "accreditation": "Accrédité par la CTI jusqu’au 31 août 2026",
+    "rncp": "39552"
+  },
+
+  "topics": {
+    "fr": [
+      "Électronique analogique et numérique",
+      "Systèmes embarqués (MCU/FPGA), modélisation & simulation",
+      "Traitement & transmission du signal",
+      "Électronique de puissance / conversion d’énergie",
+      "Réseaux industriels & radiocommunications",
+      "Tests, qualité, industrialisation, veille techno"
+    ],
+    "en": [
+      "Analog and digital electronics",
+      "Embedded systems (MCU/FPGA), modeling & simulation",
+      "Signal processing & transmission",
+      "Power electronics / energy conversion",
+      "Industrial networks & radiocommunications",
+      "Testing, quality, industrialization, technology watch"
+    ]
+  },
+
+  "projects": {
+    "fr": [
+      "Projets embarqués et cas d’étude (traitement du signal, RF/haut débit)",
+      "Expérience pro + mémoire ingénieur"
+    ],
+    "en": [
+      "Embedded projects and case studies (signal processing, RF/high-speed)",
+      "Professional experience + engineering thesis"
+    ]
+  },
+
+  "competencies": {
+    "fr": [
+      "Analyser un problème et établir un cahier des charges",
+      "Choisir des solutions technologiques adaptées",
+      "Maîtriser modélisation, programmation et simulation",
+      "Concevoir des dispositifs/systèmes électroniques complexes",
+      "Mettre en œuvre tests et outils de production, assurer la qualité",
+      "Assurer une veille et anticiper les évolutions technologiques"
+    ],
+    "en": [
+      "Analyze problems and define specifications",
+      "Select suitable technological solutions",
+      "Master modeling, programming and simulation",
+      "Design complex electronic devices/systems",
+      "Implement testing and production tools, ensure quality",
+      "Conduct technology watch and anticipate innovations"
+    ]
+  },
+
+  "links": [
+    { "label": "Fiche officielle — Diplôme d’ingénieur Systèmes électroniques (Cnam)", "href": "https://formation.cnam.fr/rechercher-par-discipline/diplome-d-ingenieur-systemes-electroniques-1003906.kjsp" },
+    { "label": "RNCP 39552", "href": "https://www.certificationprofessionnelle.fr/recherche/rncp/39552" },
+    { "label": "IPST Cnam Toulouse", "href": "https://ipst.cnam.fr" }
+  ],
+
+  "logo": { "href": "https://www.cnam.fr" },
+  "brand": {}
+}

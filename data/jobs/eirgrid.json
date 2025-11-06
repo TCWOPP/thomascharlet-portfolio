@@ -1,0 +1,34 @@
+{
+  "slug": "eirgrid",
+  "period": "2015 (Juin)",
+  "role": {
+    "fr": "Assistant administratif industriel",
+    "en": "Industrial Administrative Assistant"
+  },
+  "org": "EirGrid",
+  "where": { "fr": "Dublin, IE", "en": "Dublin, IE" },
+  "summary": {
+    "fr": "Consolidation de données énergie et mise à jour de graphiques de consommation/production. Support reporting pour documents internes.",
+    "en": "Energy data consolidation and updates of consumption/production charts. Reporting support for internal documents."
+  },
+  "missions": {
+    "fr": [
+      "Collecte/agrégation de données multi-sources (Excel).",
+      "Mise à jour de graphiques mensuels/annuels (consommation/production).",
+      "Contrôles de cohérence et corrections sur historiques.",
+      "Mise en forme de rapports pour diffusion interne."
+    ],
+    "en": [
+      "Collected/aggregated data from multiple sources (Excel).",
+      "Updated monthly/annual charts (consumption/production).",
+      "Consistency checks and historical fixes.",
+      "Formatted reports for internal circulation."
+    ]
+  },
+  "tech": ["Excel/Charts", "Data cleaning", "Reporting"],
+  "links": [
+    { "label": "EirGrid – Site officiel", "href": "https://www.eirgrid.ie" }
+  ],
+  "logo": { "href": "https://www.eirgrid.ie" },
+  "brand": {}
+}

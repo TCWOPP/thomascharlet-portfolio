@@ -1,0 +1,17 @@
+{
+  "slug": "tech1up",
+  "period": "Jan 2014 – 2016",
+  "role": { "fr": "PDG / auto-entrepreneur", "en": "Founder / self-employed" },
+  "org": "Tech1up",
+  "where": { "fr": "Paris, FR", "en": "Paris, FR" },
+  "summary": {
+    "fr": "Projet étudiant de développement technologique.",
+    "en": "Student technology development project."
+  },
+  "missions": {
+    "fr": ["Pilotage d’activités et livrables techniques"],
+    "en": ["Steering technical activities and deliverables"]
+  },
+  "tech": [],
+  "links": []
+}

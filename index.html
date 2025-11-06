@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thomas Charlet-Wilson — CV / Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{ --ink:#0f172a; --muted:#475569; --bg:#ffffff; --brand:#2563eb; --brand2:#22c55e; --border:#e2e8f0; --card:#f8fafc; --radius:16px; --shadow:0 14px 32px rgba(2,6,23,.08); --rail:#0f172a0d; --rail2:#0f172a14 }
+    *{ box-sizing:border-box } html,body{ height:100% } 
+    body{ margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6 }
+    a{ color:var(--brand); text-decoration:none }
+    .container{ width:min(1120px,92vw); margin-inline:auto }
+    header{ position:sticky; top:0; backdrop-filter: blur(8px); background: color-mix(in oklab, var(--bg), transparent 20%); border-bottom:1px solid var(--border); z-index:40 }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 0 }
+    .brand{ font-weight:800 } .navlinks{ display:flex; gap:16px; flex-wrap:wrap }
+    .lang{ display:flex; gap:8px }
+    .chip{ font-size:13px; padding:6px 10px; border-radius:999px; border:1px solid var(--border); background:var(--card); cursor:pointer }
+    .chip[aria-pressed="true"]{ border-color: var(--brand); color: var(--brand); }
+    .section{ padding:min(8vh,72px) 0 }
+    h2{ font-size:1.8em; margin-bottom:.3em }
+    .subtitle{ color:var(--muted) }
+
+    /* Hero */
+    .hero{ display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center }
+    .hero h1{ font-size:clamp(28px,5vw,44px); margin:0 0 8px }
+    .avatar{ aspect-ratio:1; border-radius:24px; overflow:hidden; border:1px solid var(--border); background:var(--card) }
+    .avatar img{ width:100%; height:100%; object-fit:cover }
+
+    /* Timeline */
+    .railbox{ background:linear-gradient(180deg, var(--rail2), transparent); border:1px solid var(--border); border-radius:var(--radius); padding:16px }
+    .bar{ height:6px; border-radius:999px; background:linear-gradient(90deg, var(--rail), var(--rail2)) }
+    .progress{ height:100%; width:0%; border-radius:inherit; background:linear-gradient(90deg, var(--brand), var(--brand2)) }
+    .filters{ display:flex; gap:8px; margin:12px 0 6px }
+    .hscroll{ overflow-x:auto; overscroll-behavior-x:contain; padding-bottom:14px }
+    .track{ display:grid; grid-auto-flow:column; grid-auto-columns: clamp(280px, 36vw, 360px); gap:16px }
+    .card{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:16px; display:flex; flex-direction:column; gap:8px; cursor:pointer }
+    .badge{ font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:6px 10px; border-radius:999px; border:1px solid }
+    .badge.work{ color:#0b2546; background:#93c5fd; border-color:#60a5fa }
+    .badge.edu{ color:#052e16; background:#86efac; border-color:#22c55e }
+    .period,.where{ color:var(--muted); font-size:13px } .role{ font-weight:700; font-size:18px; margin:0 }
+    ul{ margin:4px 0 0 18px; padding:0 } li{ margin:6px 0 }
+    .controls{ display:flex; gap:10px; justify-content:flex-end; margin-top:8px }
+    .navbtn{ width:42px; height:42px; border-radius:12px; border:1px solid var(--border); background:var(--card); font-weight:800; cursor:pointer }
+
+    /* Skills */
+    .chips{ display:flex; flex-wrap:wrap; gap:8px } .skill{ font-size:13px; padding:6px 10px; border-radius:999px; background:#eef2ff; border:1px solid #c7d2fe }
+
+    /* Contact */
+    form.contact{ display:grid; gap:12px; max-width:560px } input,textarea{ border:1px solid var(--border); background:var(--bg); color:inherit; border-radius:12px; padding:10px 12px; font: inherit } textarea{ resize: vertical }
+
+    footer{ padding:28px 0; color:var(--muted); border-top:1px solid var(--border) }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Thomas Charlet-Wilson</div>
+      <nav class="navlinks">
+        <a href="#about">Présentation</a>
+        <a href="#timeline">Parcours</a>
+        <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="lang">
+        <button class="chip" data-lang="fr" aria-pressed="true">FR</button>
+        <button class="chip" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section hero" id="home">
+      <div>
+        <h1>Ingénieur systèmes électroniques (en cours) / Consultant technicien</h1>
+        <p class="subtitle">Du terrain à la conception, je conçois des systèmes fiables : automatisme, électronique, tests ferroviaires, réseaux industriels.</p>
+        <div style="margin-top:1em">
+          <a href="#timeline" class="chip">Voir mon parcours</a>
+          <a href="#contact" class="chip">Me contacter</a>
+        </div>
+      </div>
+      <div class="avatar"><img src="photo.jpeg" alt="Portrait"></div>
+    </section>
+
+    <section class="section" id="timeline">
+      <h2>Parcours (2014 → aujourd’hui)</h2>
+      <p class="subtitle">Études et expériences clés. Clique un poste pour voir les détails.</p>
+
+      <div class="filters">
+        <button class="chip" data-filter="all" aria-pressed="true">Tout</button>
+        <button class="chip" data-filter="work">Expériences</button>
+        <button class="chip" data-filter="edu">Études</button>
+      </div>
+
+      <div class="railbox">
+        <div class="bar"><div class="progress" id="progress"></div></div>
+        <div class="hscroll" id="scroller"><div class="track" id="track"></div></div>
+        <div class="controls"><button class="navbtn" id="prev">⟨</button><button class="navbtn" id="next">⟩</button></div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <h2>Compétences</h2>
+      <div class="card"><strong>Langages</strong><div class="chips" id="chip-langs"></div></div>
+      <div class="card"><strong>Outils</strong><div class="chips" id="chip-tools"></div></div>
+      <div class="card"><strong>Domaines</strong><div class="chips" id="chip-domains"></div></div>
+      <div class="card"><strong>Certifications</strong><div class="chips" id="chip-certs"></div></div>
+    </section>
+
+    <section class="section" id="contact">
+      <h2>Contact</h2>
+      <form class="contact" action="https://formspree.io/f/xldoqopd" method="POST">
+        <input name="name" placeholder="Nom" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button class="chip" type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer><div class="container">© <span id="year"></span> Thomas Charlet-Wilson</div></footer>
+
+<script>
+  const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+  const state={lang:'fr',data:null};
+
+  async function loadJSON(p){ const r=await fetch(p); if(!r.ok) throw new Error('Missing '+p); return r.json(); }
+  async function loadData(){
+    const [skills,timeline]=await Promise.all([
+      loadJSON('data/skills.json'),
+      loadJSON('data/timeline.json')
+    ]);
+    state.data={skills,timeline};
+  }
+
+  function chipBox(id,arr){ const box=$(id); box.innerHTML=''; arr.forEach(s=>{const e=document.createElement('span'); e.className='skill'; e.textContent=s; box.appendChild(e);}); }
+  function renderSkills(){ const s=state.data.skills; chipBox('#chip-langs',s.languages); chipBox('#chip-tools',s.tools); chipBox('#chip-domains',s.domains[state.lang]); chipBox('#chip-certs',s.certifications); }
+
+  function renderTimeline(filter='all'){
+    const track=$('#track'); const data=state.data.timeline;
+    const items=[...data.work,...data.edu]
+      .sort((a,b)=> (b.sort||'').localeCompare(a.sort||''))
+      .filter(x=>filter==='all'||x.type===filter);
+
+    track.innerHTML='';
+    items.forEach(it=>{
+      const type=it.type;
+      const dest=type==='work'?`job.html?id=${encodeURIComponent(it.slug)}`:`study.html?id=${encodeURIComponent(it.slug)}`;
+      const card=document.createElement('div'); card.className='card'; card.dataset.type=type; card.title='Voir les détails';
+      card.innerHTML=`
+        <div class="badge ${type}">${type==='work'?'Expérience':'Études'}</div>
+        <h3 class="role">${it.role[state.lang]}</h3>
+        <div class="where">${it.org} – ${it.period}</div>
+        ${it.bullets?.[state.lang]?'<ul>'+it.bullets[state.lang].map(b=>`<li>${b}</li>`).join('')+'</ul>':''}
+      `;
+      card.onclick=()=>location.href=dest;
+      track.appendChild(card);
+    });
+  }
+
+  function bindFilters(){
+    $$('[data-filter]').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        $$('[data-filter]').forEach(b=>b.setAttribute('aria-pressed','false'));
+        btn.setAttribute('aria-pressed','true');
+        renderTimeline(btn.dataset.filter);
+      });
+    });
+  }
+
+  (async function init(){
+    await loadData();
+    renderSkills();
+    renderTimeline('all');
+    bindFilters();
+    $('#year').textContent=new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>

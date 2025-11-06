@@ -1,0 +1,38 @@
+{
+  "slug": "mamashelter-lille",
+  "period": "2021 (Nov) – 2023 (Juil)",
+  "role": {
+    "fr": "Technicien de maintenance hôtel",
+    "en": "Hotel Maintenance Technician"
+  },
+  "org": "Mama Shelter Lille",
+  "where": { "fr": "Lille, FR", "en": "Lille, FR" },
+  "summary": {
+    "fr": "Maintenance multi-technique en environnement hôtelier 24/7 : chambres, back-office et parties communes. Interventions rapides, sécurité incendie, suivi prestataires.",
+    "en": "Multi-technical maintenance in a 24/7 hotel environment: rooms, back office and common areas. Rapid response, fire safety, vendor coordination."
+  },
+  "missions": {
+    "fr": [
+      "Dépannages courants électricité/plomberie/serrurerie/peinture en chambres et espaces communs.",
+      "Maintenance de premier niveau CVC (splits, VMC) et relèves alertes GTB.",
+      "Tests hebdo sécurité incendie (BAES, déclencheurs, alarmes) et levées de doutes.",
+      "Gestion stock pièces, suivi commandes et interface fournisseurs.",
+      "Participation audit sécurité/hygiène, tenue registre sécurité et traçabilité GMAO.",
+      "Astreintes tournantes, interventions hors-heures, relation clientèle."
+    ],
+    "en": [
+      "Routine troubleshooting: electrical/plumbing/locks/painting in rooms and public areas.",
+      "First-level HVAC maintenance (splits, ventilation) and BMS alarm follow-up.",
+      "Weekly fire-safety checks (emergency lights, call points, alarms) and incident handling.",
+      "Spare parts stock management, purchase tracking and vendor coordination.",
+      "Support safety/hygiene audits, logbook updates and CMMS traceability.",
+      "On-call rotations, off-hours interventions, guest interaction."
+    ]
+  },
+  "tech": ["Electrical", "Plumbing", "Locks", "Painting", "HVAC basics", "BMS", "Fire Safety", "CMMS", "Customer service"],
+  "links": [
+    { "label": "Mama Shelter Lille – Site", "href": "https://mamashelter.com/lille/" }
+  ],
+  "logo": { "href": "https://mamashelter.com/lille/" },
+  "brand": {}
+}

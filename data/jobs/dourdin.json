@@ -1,0 +1,36 @@
+{
+  "slug": "dourdin",
+  "period": "2018 (Mai – Juil)",
+  "role": {
+    "fr": "Agent de maintenance",
+    "en": "Maintenance Technician"
+  },
+  "org": "Dourdin SA",
+  "where": { "fr": "Saint-André-lez-Lille, FR", "en": "Saint-André-lez-Lille, FR" },
+  "summary": {
+    "fr": "Maintenance d’équipements de production (impression/usinage). Mise en place d’améliorations simples et gestion sécurisé des produits dangereux.",
+    "en": "Maintenance of production equipment (printing/machining). Implemented simple improvements and managed dangerous products safely."
+  },
+  "missions": {
+    "fr": [
+      "Entretien préventif et curatif des machines de production (graissage, courroies, capteurs).",
+      "Installation et mise en service de systèmes automatisés neufs (assistance intégration).",
+      "Organisation et rangement des produits dangereux selon consignes HSE.",
+      "Rédaction de modes opératoires simples et mise à jour des registres.",
+      "Appui aux opérateurs et actions anti-pannes récurrentes."
+    ],
+    "en": [
+      "Preventive and corrective maintenance on production machines (lubrication, belts, sensors).",
+      "Assisted installation/commissioning of new automated systems.",
+      "Organized hazardous products storage according to HSE rules.",
+      "Wrote simple work instructions and updated logs.",
+      "Supported operators and tackled recurrent failures."
+    ]
+  },
+  "tech": ["Mechanics", "Sensors", "Automation basics", "HSE", "CMMS basics"],
+  "links": [
+    { "label": "Dourdin SA – Site", "href": "https://www.dourdin.com" }
+  ],
+  "logo": { "href": "https://www.dourdin.com" },
+  "brand": {}
+}

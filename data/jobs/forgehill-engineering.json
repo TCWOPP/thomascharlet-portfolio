@@ -1,0 +1,46 @@
+{
+  "slug": "forgehill-engineering",
+  "period": "2017 (Août)",
+  "role": {
+    "fr": "Assistant Technicien",
+    "en": "Assistant Technician"
+  },
+  "org": "Forge Hill Engineering Ltd",
+  "where": { "fr": "Dublin, IE", "en": "Dublin, IE" },
+
+  "summary": {
+    "fr": "Atelier de mécanique/usinage : réalisation de pièces et gabarits, utilisation de machines-outils (conventionnelles & CNC), contrôle dimensionnel, sécurité atelier.",
+    "en": "Mechanical/machining workshop: parts and jigs manufacturing, operation of conventional & CNC machines, dimensional inspection, shop safety."
+  },
+
+  "missions": {
+    "fr": [
+      "Production de pièces selon plans (découpe, perçage, fraisage, tournage).",
+      "Réalisation de gabarits/fixtures et outillages d’assemblage.",
+      "Finitions : ébavurage, polissage, contrôle au pied à coulisse/micromètre.",
+      "Préparation poste, rangement et respect des consignes HSE."
+    ],
+    "en": [
+      "Manufactured parts from drawings (cutting, drilling, milling, turning).",
+      "Built jigs/fixtures and assembly tooling.",
+      "Finishing: deburring, polishing, caliper/micrometer inspection.",
+      "Workstation prep/cleaning and HSE compliance."
+    ]
+  },
+
+  "tech": [
+    "Machining", "Milling/Lathe", "CNC basics",
+    "Jigs & fixtures", "Metrology (caliper/micrometer)", "Workshop safety"
+  ],
+
+  "links": [
+    { "label": "Forge Hill Engineering Ltd — Listing (Phonebook.ie)", "href": "https://www.phonebook.ie/forge-hill-engineering-ltd-dublin-A96/" }
+  ],
+
+  "logo": {
+    "href": "https://www.phonebook.ie/forge-hill-engineering-ltd-dublin-A96/",
+    "alt": "Forge Hill Engineering Ltd"
+  },
+"logo": { "href": "https://s1.qwant.com/thumbr/250x250/0/8/1ad9ca4ea39f18739a43cd27f854491d4ab58f66a47993be4721febba85f7e/OIP.abK-fEklNLCpVxRsfT8K9QAAAA.jpg?u=https%3A%2F%2Ftse.mm.bing.net%2Fth%2Fid%2FOIP.abK-fEklNLCpVxRsfT8K9QAAAA%3Fpid%3DApi&q=0&b=1&p=0&a=0" },
+  "brand": {}
+}
