@@ -2,158 +2,189 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Poste — Thomas Charlet-Wilson</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Poste — TCW</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --ink:#0f172a; --muted:#475569; --bg:#ffffff;
-      --brand:#2563eb; --brand2:#22c55e; --border:#e2e8f0; --card:#f8fafc;
-      --radius:16px; --shadow:0 14px 32px rgba(2,6,23,.08)
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    :root{ --ink:#0f172a; --muted:#475569; --bg:#ffffff; --brand:#2563eb; --brand2:#22c55e; --border:#e2e8f0; --card:#f8fafc; --radius:16px; --shadow:0 14px 32px rgba(2,6,23,.08) }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0b1220; --ink:#e5eefc; --muted:#9fb0c9; --card:#0f172a; --border:#1f2a44 } body{ background: radial-gradient(1200px 800px at 20% -10%, #1a2642, #0b1220 48%), var(--bg) } }
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    a{color:var(--brand);text-decoration:none} img{max-width:100%;display:block}
     .container{width:min(900px,92vw);margin:24px auto;position:relative}
-    a{color:var(--brand);text-decoration:none}
     header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
-    h1{margin:.2em 0}.meta{color:var(--muted)}ul{margin:8px 0 0 18px}li{margin:6px 0}
+    .lang{display:flex;gap:8px}
+    .chip{font-size:13px;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:var(--card);cursor:pointer}
+    .chip[aria-pressed="true"]{border-color:var(--brand);color:var(--brand)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+    h1{margin:.2em 0} .meta{color:var(--muted)} ul{margin:8px 0 0 18px} li{margin:6px 0}
     .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
     @media (max-width:820px){.grid{grid-template-columns:1fr}}
-    .pill{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;margin:4px 6px 0 0;background:var(--card)}
     .org-logo{position:absolute;top:0;right:0;transform:translate(-12px,12px)}
     .org-logo a{display:inline-block;border:1px solid var(--border);background:#fff;border-radius:12px;padding:8px}
-    .org-logo img{height:40px;width:auto;display:block}
+    .org-logo img{height:40px;width:auto}
     .banner{position:fixed;left:12px;bottom:12px;padding:8px 12px;border-radius:8px;border:1px solid #fca5a5;background:#fee2e2;color:#991b1b;display:none}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <a href="index.html">← Retour</a>
-      <a href="index.html#timeline">Timeline</a>
+      <nav style="display:flex;gap:12px;align-items:center">
+        <a href="index.html">← <span data-i18n="back">Retour</span></a>
+        <a href="index.html#timeline" style="opacity:.8">Timeline</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Switch language">
+        <button class="chip" data-lang="fr" aria-pressed="true">FR</button>
+        <button class="chip" data-lang="en" aria-pressed="false">EN</button>
+      </div>
     </header>
 
     <div id="content" class="card">Chargement…</div>
     <div id="logoBox" class="org-logo" aria-hidden="true"></div>
   </div>
-
   <div id="err" class="banner"></div>
-  <script>
-    const $=s=>document.querySelector(s);
-    const qp=k=>new URLSearchParams(location.search).get(k);
 
-    // -------- utils couleurs --------
-    const clamp=(v,min=0,max=255)=>Math.max(min,Math.min(max,v));
-    const rgb2luma=(r,g,b)=>0.2126*r+0.7152*g+0.0722*b;
-    const contrastInk=([r,g,b])=> rgb2luma(r,g,b)>170 ? '#0f172a' : '#f8fafc';
-    const toHex=([r,g,b])=>{const h=n=>n.toString(16).padStart(2,'0'); return `#${h(r)}${h(g)}${h(b)}`;}
-    const deriveSecondary=([r,g,b])=>{const k=.15;return [clamp(Math.round(r+(255-r)*k)),clamp(Math.round(g+(255-g)*k)),clamp(Math.round(b+(255-b)*k))];};
+<script>
+/* ===== i18n (UI only; content comes from JSON with fr/en fields) ===== */
+const I18N = {
+  fr: { back:'Retour', headings:{ missions:'Missions', tech:'Technos & outils', links:'Liens' } },
+  en: { back:'Back',   headings:{ missions:'Responsibilities', tech:'Tech & Tools', links:'Links' } }
+};
 
-    async function getDominantColorFromImage(src){
-      const img=await new Promise((res,rej)=>{const i=new Image();i.crossOrigin='anonymous';i.onload=()=>res(i);i.onerror=rej;i.src=src;});
-      const maxW=120, scale=Math.min(1,maxW/(img.naturalWidth||img.width||maxW));
-      const w=Math.max(1,Math.round((img.naturalWidth||img.width||maxW)*scale));
-      const h=Math.max(1,Math.round((img.naturalHeight||img.height||maxW)*scale));
-      const c=document.createElement('canvas'); c.width=w; c.height=h; const ctx=c.getContext('2d');
-      ctx.drawImage(img,0,0,w,h);
-      const {data}=ctx.getImageData(0,0,w,h);
-      const bucket=new Map();
-      for(let p=0;p<data.length;p+=4){
-        const a=data[p+3]; if(a<128) continue;
-        const r=data[p],g=data[p+1],b=data[p+2];
-        if(r>240&&g>240&&b>240) continue;
-        const key=((r>>4)<<8)|((g>>4)<<4)|(b>>4);
-        bucket.set(key,(bucket.get(key)||0)+1);
-      }
-      if(!bucket.size) return [37,99,235];
-      let bestKey=null,best=-1; for(const [k,cnt] of bucket) if(cnt>best){best=cnt;bestKey=k;}
-      const qr=(bestKey>>8)&0xF,qg=(bestKey>>4)&0xF,qb=bestKey&0xF;
-      return [qr*16+8,qg*16+8,qb*16+8];
-    }
+const $=s=>document.querySelector(s);
+const qp=k=>new URLSearchParams(location.search).get(k);
+const state={ lang: (qp('lang')||document.documentElement.lang||'fr').startsWith('en')?'en':'fr' };
 
-    function setThemeFromRGB(rgb){
-      const primary=toHex(rgb), secondary=toHex(deriveSecondary(rgb)), ink=contrastInk(rgb);
-      document.documentElement.style.setProperty('--brand', primary);
-      document.documentElement.style.setProperty('--brand2', secondary);
-      document.documentElement.style.setProperty('--ink', ink);
-      document.documentElement.style.setProperty('--card', ink==='#f8fafc' ? '#0f172a0d' : '#f8fafc');
-    }
-    function setThemeFromBrand(brand={}){
-      if(brand.primary) document.documentElement.style.setProperty('--brand',brand.primary);
-      if(brand.secondary)document.documentElement.style.setProperty('--brand2',brand.secondary);
-      if(brand.ink)     document.documentElement.style.setProperty('--ink',brand.ink);
-      if(brand.bg)      document.documentElement.style.setProperty('--bg',brand.bg);
-    }
+function setLang(lang){
+  state.lang=lang;
+  document.documentElement.lang=lang;
+  document.querySelectorAll('.lang .chip').forEach(b=> b.setAttribute('aria-pressed', String(b.dataset.lang===lang)));
+  const t=I18N[lang];
+  const backLink=document.querySelector('[data-i18n="back"]'); if(backLink) backLink.textContent=t.back;
+  // re-render content if already loaded
+  if(window.__JOB_DATA__) render(window.__JOB_DATA__);
+}
 
-    // -------- logo auto --------
-    const domainFromUrl=url=>{try{const u=new URL(url);return u.hostname;}catch{return null;}};
-    function buildLogoCandidates(data){
-      const c=[]; if(data.logo?.src) c.push({src:data.logo.src,href:data.logo.href,alt:data.logo.alt});
-      const site=data.logo?.href||data.links?.find(l=>/site|official|accueil|home/i.test(l.label||''))?.href;
-      const host=site?domainFromUrl(site):null;
-      if(host){
-        c.push({src:`https://logo.clearbit.com/${host}`,href:site,alt:data.org||'Logo'});
-        c.push({src:`https://www.google.com/s2/favicons?domain=${host}&sz=128`,href:site,alt:data.org||'Favicon'});
-        c.push({src:`https://icons.duckduckgo.com/ip3/${host}.ico`,href:site,alt:data.org||'Favicon'});
-      }
-      return c;
-    }
-    async function pickFirstWorkingImage(cands){
-      for(const c of cands){
-        try{await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res();i.onerror=rej;i.src=c.src;});return c;}catch{}
-      }
-      return null;
-    }
-    function setLogoBox(logo){
-      const box=$('#logoBox'); if(!box) return;
-      if(!logo){box.innerHTML='';box.setAttribute('aria-hidden','true');return;}
-      const html=logo.href?`<a href="${logo.href}" target="_blank" rel="noopener"><img src="${logo.src}" alt="${logo.alt||'Logo'}"></a>`
-                          :`<span><img src="${logo.src}" alt="${logo.alt||'Logo'}"></span>`;
-      box.innerHTML=html; box.setAttribute('aria-hidden','false');
-    }
+/* ===== brand / logo helpers ===== */
+const clamp=(v,min=0,max=255)=>Math.max(min,Math.min(max,v));
+const toHex=([r,g,b])=>{const h=n=>n.toString(16).padStart(2,'0'); return `#${h(r)}${h(g)}${h(b)}`;}
+const deriveSecondary=([r,g,b])=>{const k=.18;return [clamp(Math.round(r+(255-r)*k)),clamp(Math.round(g+(255-g)*k)),clamp(Math.round(b+(255-b)*k))];};
+const rgb2luma=(r,g,b)=>0.2126*r+0.7152*g+0.0722*b;
+const contrastInk=([r,g,b])=> rgb2luma(r,g,b)>170 ? '#0f172a' : '#f8fafc';
 
-    async function themeFromLogoIfPossible(logo,brand){
-      if(brand?.primary){ setThemeFromBrand(brand); return; }
-      try{
-        const sameOrigin = !/^https?:/i.test(logo?.src||'');
-        if(logo?.src && sameOrigin){ const rgb=await getDominantColorFromImage(logo.src); setThemeFromRGB(rgb); return; }
-      }catch{}
-      // sinon: thème par défaut
-    }
+async function getDominantColorFromImage(src){
+  // works only for same-origin images (e.g., assets/logos/*.png)
+  const img=await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=src;});
+  const maxW=140, scale=Math.min(1,maxW/(img.naturalWidth||img.width||maxW));
+  const w=Math.max(1,Math.round((img.naturalWidth||img.width||maxW)*scale));
+  const h=Math.max(1,Math.round((img.naturalHeight||img.height||maxW)*scale));
+  const c=document.createElement('canvas'); c.width=w; c.height=h; const ctx=c.getContext('2d');
+  ctx.drawImage(img,0,0,w,h);
+  const {data}=ctx.getImageData(0,0,w,h);
+  const bucket=new Map();
+  for(let p=0;p<data.length;p+=4){
+    const a=data[p+3]; if(a<128) continue;
+    const r=data[p],g=data[p+1],b=data[p+2];
+    if(r>240&&g>240&&b>240) continue; // ignore near-white
+    const key=((r>>4)<<8)|((g>>4)<<4)|(b>>4);
+    bucket.set(key,(bucket.get(key)||0)+1);
+  }
+  if(!bucket.size) return [37,99,235];
+  let bestKey=null,best=-1; for(const [k,cnt] of bucket) if(cnt>best){best=cnt;bestKey=k;}
+  const qr=(bestKey>>8)&0xF,qg=(bestKey>>4)&0xF,qb=bestKey&0xF;
+  return [qr*16+8,qg*16+8,qb*16+8];
+}
 
-    // -------- vue --------
-    const showErr=m=>{const b=$('#err');b.textContent=m;b.style.display='block';};
+function applyTheme(primaryHex){
+  const s=deriveSecondary(hex2rgb(primaryHex));
+  const ink=contrastInk(hex2rgb(primaryHex));
+  document.documentElement.style.setProperty('--brand', primaryHex);
+  document.documentElement.style.setProperty('--brand2', toHex(s));
+  document.documentElement.style.setProperty('--ink', ink);
+  document.documentElement.style.setProperty('--card', ink==='#f8fafc' ? '#0f172a0d' : '#f8fafc');
+}
+function hex2rgb(h){ const a=h.replace('#',''); return [parseInt(a.slice(0,2),16),parseInt(a.slice(2,4),16),parseInt(a.slice(4,6),16)]; }
 
-    (async function(){
-      const id=qp('id');
-      if(!id){ $('#content').textContent='ID manquant (?id=...)'; return; }
-      try{
-        const r=await fetch(`data/jobs/${id}.json`);
-        if(!r.ok) throw new Error('Fiche introuvable : '+id);
-        const d=await r.json();
+const domainFromUrl=url=>{try{const u=new URL(url);return u.hostname;}catch{return null;}};
+function buildLogoCandidates(d){
+  const c=[];
+  if(d.logo?.src) c.push({src:d.logo.src, href:d.logo.href, alt:d.logo.alt||d.org||'Logo'});
+  const href = d.logo?.href || (d.links||[]).find(l=>/site|official|accueil|home/i.test(l.label||''))?.href;
+  const host = href? domainFromUrl(href) : null;
+  if(host){
+    c.push({src:`https://logo.clearbit.com/${host}`, href, alt:d.org||'Logo'});
+    c.push({src:`https://www.google.com/s2/favicons?domain=${host}&sz=128`, href, alt:d.org||'Favicon'});
+    c.push({src:`https://icons.duckduckgo.com/ip3/${host}.ico`, href, alt:d.org||'Favicon'});
+  }
+  return c;
+}
+async function pickFirstWorkingImage(cands){
+  for(const c of cands){
+    try{await new Promise((res,rej)=>{const i=new Image();i.onload=()=>res();i.onerror=rej;i.src=c.src;});return c;}catch{}
+  }
+  return null;
+}
+function setLogoBox(logo){
+  const box=$('#logoBox'); if(!box) return;
+  if(!logo){ box.innerHTML=''; box.setAttribute('aria-hidden','true'); return; }
+  const html=logo.href? `<a href="${logo.href}" target="_blank" rel="noopener"><img src="${logo.src}" alt="${logo.alt||'Logo'}"></a>`
+                      : `<span><img src="${logo.src}" alt="${logo.alt||'Logo'}"></span>`;
+  box.innerHTML=html; box.setAttribute('aria-hidden','false');
+}
 
-        const cand=await pickFirstWorkingImage(buildLogoCandidates(d));
-        setLogoBox(cand);
-        await themeFromLogoIfPossible(cand,d.brand);
+async function themeFromData(d,logo){
+  if(d.brand?.primary){ applyTheme(d.brand.primary); return; }
+  // Only attempt palette from image if same-origin (no http/https)
+  if(logo?.src && !/^https?:/i.test(logo.src)){
+    try{ const rgb=await getDominantColorFromImage(logo.src); applyTheme(toHex(rgb)); }catch{}
+  }
+}
 
-        document.title = `${(d.role?.fr||d.role?.en)||'Poste'} — ${d.org||''}`;
-        const tech=(d.tech||[]).map(x=>`<span class="pill">${x}</span>`).join('');
-        const links=(d.links||[]).map(l=>`<a href="${l.href}" target="_blank" rel="noopener">${l.label}</a>`).join(' • ');
+/* ===== Rendering ===== */
+function render(d){
+  window.__JOB_DATA__=d;
+  const lang=state.lang;
+  const t=I18N[lang].headings;
+  document.title = `${(d.role?.[lang]||d.role?.fr||d.role?.en||'Poste')} — ${d.org||'Entreprise'}`;
 
-        $('#content').innerHTML = `
-          <h1>${(d.role?.fr||d.role?.en)||''}</h1>
-          <div class="meta">${d.org||''} — ${(d.where?.fr||d.where?.en)||''} • ${d.period||''}</div>
-          ${d.summary?.fr ? `<p>${d.summary.fr}</p>` : (d.summary?.en ? `<p>${d.summary.en}</p>` : '')}
-          <div class="grid">
-            <div><h3>Missions</h3><ul>${(d.missions?.fr||d.missions?.en||[]).map(x=>`<li>${x}</li>`).join('')}</ul></div>
-            <div><h3>Tech & outils</h3><div>${tech||'<span class="muted">—</span>'}</div></div>
-          </div>
-          ${links? `<p><strong>Liens :</strong> ${links}</p>`: ''}
-        `;
-      }catch(e){ showErr(String(e)); }
-    })();
-  </script>
+  const missions = (d.missions?.[lang] || d.missions?.fr || d.missions?.en || []);
+  const tech = d.tech || [];
+  const links = d.links || [];
+
+  $('#content').innerHTML = `
+    <h1>${(d.role?.[lang]||d.role?.fr||d.role?.en)||''}</h1>
+    <div class="meta">${d.org||''} — ${(d.where?.[lang]||d.where?.fr||d.where?.en||'')} • ${d.period||''}</div>
+    ${d.summary?.[lang] ? `<p>${d.summary[lang]}</p>` : (d.summary?.fr? `<p>${d.summary.fr}</p>` : (d.summary?.en? `<p>${d.summary.en}</p>`:''))}
+    <div class="grid">
+      <div><h3>${t.missions}</h3>${missions.length? `<ul>${missions.map(x=>`<li>${x}</li>`).join('')}</ul>` : '<p>—</p>'}</div>
+      <div><h3>${t.tech}</h3>${tech.length? `<ul>${tech.map(x=>`<li>${x}</li>`).join('')}</ul>` : '<p>—</p>'}</div>
+    </div>
+    ${links.length? `<p><strong>${t.links} :</strong> ${links.map(l=>`<a href="${l.href}" target="_blank" rel="noopener">${l.label}</a>`).join(' • ')}</p>` : ''}
+  `;
+}
+
+/* ===== Boot ===== */
+function showErr(m){ const b=$('#err'); b.textContent=m; b.style.display='block'; }
+document.querySelectorAll('.lang .chip').forEach(b=> b.addEventListener('click',()=>setLang(b.dataset.lang)));
+
+(async function(){
+  try{
+    const id=qp('id'); if(!id) throw new Error('ID manquant (?id=...)');
+    const r=await fetch(`data/jobs/${id}.json`);
+    if(!r.ok) throw new Error('Fiche introuvable : '+id);
+    const d=await r.json();
+
+    // UI text in current lang
+    setLang(state.lang);
+
+    // Logo + brand
+    const logo = await pickFirstWorkingImage(buildLogoCandidates(d));
+    setLogoBox(logo);
+    await themeFromData(d,logo);
+
+    render(d);
+  }catch(e){ showErr(String(e)); }
+})();
+</script>
 </body>
 </html>
