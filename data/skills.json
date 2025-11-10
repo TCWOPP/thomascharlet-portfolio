@@ -1,23 +1,31 @@
 {
-  "languages": ["C", "C++", "Python", "HTBasic", "Java"],
-  "tools": ["SolidWorks", "Unity Pro", "SEE Electrical", "Siemens TIA", "LTspice", "KiCad", "Proteus", "Photoshop"],
-  "domains": {
+  "languages": [
+    { "fr": "C (embarqué)", "en": "C (embedded)", "href": "https://en.cppreference.com/w/c" },
+    { "fr": "Python", "en": "Python", "href": "https://docs.python.org/3/" },
+    { "fr": "HTML", "en": "HTML", "href": "https://developer.mozilla.org/" }
+  ],
+"tools": [
+    { "fr": "LabVIEW", "en": "LabVIEW", "href": "https://www.ni.com/fr-fr/shop/labview.html" },
+    { "fr": "NI TestStand", "en": "NI TestStand", "href": "https://www.ni.com/fr-fr/shop/teststand.html" },
+    { "fr": "SEE Electrical", "en": "SEE Electrical", "href": "https://www.ige-xao.com/fr/produits/see-electrical/" },
+    { "fr": "KiCad (PCB)", "en": "KiCad (PCB)", "href": "https://www.kicad.org/" },
+    { "fr": "SolidWorks (CAO)", "en": "SolidWorks (CAD)", "href": "https://www.solidworks.com/fr" }
+  ],
+ "domains": {
     "fr": [
-      "Maintenance électro/auto",
-      "Automatismes & réseaux industriels",
-      "Électronique & électricité",
-      "Mécatronique",
-      "Pneumatique",
-      "Hydraulique"
+      { "fr": "Systèmes électroniques", "en": "Electronic systems", "href": "https://fr.wikipedia.org/wiki/Syst%C3%A8me_%C3%A9lectronique" },
+      { "fr": "Bancs de test & validation", "en": "Test benches & validation", "href": "https://fr.wikipedia.org/wiki/Banc_d%27essai" },
+	  { "fr": "Conception PCB & prototypage", "en": "PCB design & prototyping", "href": "https://fr.wikipedia.org/wiki/Circuit_imprim%C3%A9" },
+      { "fr": "CAO mécanique (bases)", "en": "Mechanical CAD (basics)", "href": "https://fr.wikipedia.org/wiki/Conception_assist%C3%A9e_par_ordinateur" }
     ],
     "en": [
-      "Electrical/automation maintenance",
-      "Industrial networks & PLCs",
-      "Electronics & electrical",
-      "Mechatronics",
-      "Pneumatics",
-      "Hydraulics"
+      { "fr": "Systèmes électroniques", "en": "Electronic systems", "href": "https://en.wikipedia.org/wiki/Electronic_system" },
+      { "fr": "Bancs de test & validation", "en": "Test benches & validation", "href": "https://en.wikipedia.org/wiki/Test_bench" },
+	  { "fr": "Conception PCB & prototypage", "en": "PCB design & prototyping", "href": "https://en.wikipedia.org/wiki/Printed_circuit_board" },
+      { "fr": "CAO mécanique (bases)", "en": "Mechanical CAD (basics)", "href": "https://en.wikipedia.org/wiki/Computer-aided_design" }
     ]
   },
-  "certifications": ["B2V ESSAI", "BE MESURE", "VERIFICATION", "ESSAI", "BR", "BC"]
+  "certifications": [
+    { "fr": "Habilitation électrique (B2V/H0v)", "en": "Electrical clearance (B2V/H0v)", "href": "https://travail-emploi.gouv.fr/formation-professionnelle/formation-professionnelle-des-salaries/article/habilitation-electrique" }
+  ]
 }

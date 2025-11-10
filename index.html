@@ -196,14 +196,37 @@ function applyI18n(){
   $$('.lang .chip').forEach(b=>b.setAttribute('aria-pressed', String(b.dataset.lang===state.lang)));
 }
 
-function chipBox(id, arr){ const box=$(id); box.innerHTML=''; (arr||[]).forEach(s=>{ const e=document.createElement('span'); e.className='skill'; e.textContent=s; box.appendChild(e); }); }
-function renderSkills(){
-  const s=state.data.skills;
-  chipBox('#chip-langs', s.languages);
-  chipBox('#chip-tools', s.tools);
-  chipBox('#chip-domains', s.domains?.[state.lang] || []);
-  chipBox('#chip-certs', s.certifications);
+// Remplace cette version simple :
+function chipBox(id, arr){ const box=$(id); box.innerHTML=''; arr.forEach(s=>{ const e=document.createElement('span'); e.className='skill'; e.textContent=s; box.appendChild(e); }); }
+function renderSkills(){ const s=state.data.skills; chipBox('#chip-langs', s.languages); chipBox('#chip-tools', s.tools); chipBox('#chip-domains', s.domains[state.lang]); chipBox('#chip-certs', s.certifications); }
+
+// Par cette version avec fallback + liens :
+function chipBox(id, arr){
+  const box=$(id); box.innerHTML='';
+  (arr||[]).forEach(item=>{
+    let label=item, href=null;
+    // 3 formats acceptés: "Python" | {label:"Python",href:"..."} | {fr:"Python",en:"Python",href:"..."}
+    if(typeof item==='object'){
+      label = item[state.lang] || item.label || item.fr || item.en || '';
+      href = item.href || null;
+    }
+    const el = document.createElement(href ? 'a' : 'span');
+    el.className='skill';
+    if(href){ el.href=href; el.target='_blank'; el.rel='noopener noreferrer'; }
+    el.textContent=label;
+    box.appendChild(el);
+  });
 }
+
+function renderSkills(){
+  const s=state.data.skills || {};
+  const domains = (s.domains && (s.domains[state.lang] || s.domains.fr)) || [];
+  chipBox('#chip-langs', s.languages || []);
+  chipBox('#chip-tools', s.tools || []);
+  chipBox('#chip-domains', domains);
+  chipBox('#chip-certs', s.certifications || []);
+}
+
 
 function renderTimeline(filter='all'){
   const data=state.data.timeline;
