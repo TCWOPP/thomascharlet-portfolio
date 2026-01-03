@@ -3,7 +3,7 @@
     {
       "slug": "ocy-technologies",
       "type": "work",
-      "sort": "2024-01-01",
+      "sort": "2024-01",
       "period": "Jan 2024 – Présent",
       "role": { "fr": "Consultant Technicien", "en": "Consultant Technician" },
       "org": "OCY Technologies",
@@ -24,72 +24,111 @@
     {
       "slug": "axima",
       "type": "work",
-      "sort": "2023-01-01",
+      "sort": "2023-01",
       "period": "Jan – Avr 2023",
       "role": { "fr": "Technicien automaticien", "en": "Automation Technician" },
       "org": "Axima",
       "where": { "fr": "Lesquin, FR", "en": "Lesquin, FR" },
       "bullets": {
-        "fr": ["Conception et programmation d’automates", "Mise en service sur site", "Maintenance curative ciblée"],
-        "en": ["PLC design and programming", "On-site commissioning", "Targeted corrective maintenance"]
+        "fr": [
+          "Conception et programmation d’automates",
+          "Mise en service sur site",
+          "Maintenance curative ciblée"
+        ],
+        "en": [
+          "PLC design and programming",
+          "On-site commissioning",
+          "Targeted corrective maintenance"
+        ]
       }
     },
     {
       "slug": "mamashelter-lille",
       "type": "work",
-      "sort": "2021-11-01",
+      "sort": "2021-11",
       "period": "Nov 2021 – Jan 2023",
       "role": { "fr": "Technicien de maintenance", "en": "Maintenance Technician" },
       "org": "MamaShelter",
       "where": { "fr": "Lille, FR", "en": "Lille, FR" },
       "bullets": {
-        "fr": ["Maintenance préventive et curative", "Relation client et priorisation", "Suivi sécurité et qualité"],
-        "en": ["Preventive & corrective maintenance", "Customer service & prioritization", "Safety and quality follow-up"]
+        "fr": [
+          "Maintenance préventive et curative",
+          "Relation client et priorisation",
+          "Suivi sécurité et qualité"
+        ],
+        "en": [
+          "Preventive & corrective maintenance",
+          "Customer service & prioritization",
+          "Safety and quality follow-up"
+        ]
       }
     },
     {
       "slug": "deltech",
       "type": "work",
-      "sort": "2020-09-01",
+      "sort": "2020-09",
       "period": "Sept 2020 – Août 2021",
-      "role": { "fr": "Resp. technicien maintenance (alternance)", "en": "Maintenance Lead Technician (apprenticeship)" },
+      "role": {
+        "fr": "Resp. technicien maintenance (alternance)",
+        "en": "Maintenance Lead Technician (apprenticeship)"
+      },
       "org": "Deltech",
       "where": { "fr": "Roubaix, FR", "en": "Roubaix, FR" },
       "bullets": {
-        "fr": ["Plan de maintenance préventive", "Interventions curatives", "Nouvelles machines"],
-        "en": ["Preventive maintenance plan", "Corrective interventions", "New machines"]
+        "fr": [
+          "Plan de maintenance préventive",
+          "Interventions curatives",
+          "Nouvelles machines"
+        ],
+        "en": [
+          "Preventive maintenance plan",
+          "Corrective interventions",
+          "New machines"
+        ]
       }
     },
     {
       "slug": "dourdin-sa",
       "type": "work",
-      "sort": "2018-05-01",
+      "sort": "2018-05",
       "period": "Mai – Juil 2018",
       "role": { "fr": "Technicien de maintenance", "en": "Maintenance Technician" },
       "org": "Dourdin SA",
       "where": { "fr": "Saint-André-lez-Lille, FR", "en": "Saint-André-lez-Lille, FR" },
       "bullets": {
-        "fr": ["Maintenance préventive/curative", "Installation de systèmes automatiques"],
-        "en": ["Preventive/corrective maintenance", "Automated systems installation"]
+        "fr": [
+          "Maintenance préventive/curative",
+          "Installation de systèmes automatiques"
+        ],
+        "en": [
+          "Preventive/corrective maintenance",
+          "Automated systems installation"
+        ]
       }
     },
     {
       "slug": "forgehill-engineering",
       "type": "work",
-      "sort": "2017-08-01",
+      "sort": "2017-08",
       "period": "Août 2017",
       "role": { "fr": "Assistant Technicien", "en": "Assistant Technician" },
       "org": "ForgeHill Engineering Ltd",
       "where": { "fr": "Dublin, IE", "en": "Dublin, IE" },
       "bullets": {
-        "fr": ["Usinage (tour, fraiseuse, CNC)", "Fabrication d’engrenages"],
-        "en": ["Machining (lathe, mill, CNC)", "Gear manufacturing"]
+        "fr": [
+          "Usinage (tour, fraiseuse, CNC)",
+          "Fabrication d’engrenages"
+        ],
+        "en": [
+          "Machining (lathe, mill, CNC)",
+          "Gear manufacturing"
+        ]
       }
     },
     {
       "slug": "pharmaceutical-ocp",
       "type": "work",
-      "sort": "2015-06-15",
+      "sort": "2015-06",
       "period": "Juin 2015",
       "role": { "fr": "Assistant Maintenance", "en": "Maintenance Assistant" },
       "org": "Pharmaceutical OCP",
@@ -102,7 +141,7 @@
     {
       "slug": "eirgrid",
       "type": "work",
-      "sort": "2015-06-01",
+      "sort": "2015-06",
       "period": "Juin 2015",
       "role": { "fr": "Assistant Reporting Énergie", "en": "Energy Reporting Assistant" },
       "org": "Eirgrid",
@@ -115,7 +154,7 @@
     {
       "slug": "tech1up",
       "type": "work",
-      "sort": "2014-01-01",
+      "sort": "2014-01",
       "period": "Jan 2014 – 2016",
       "role": { "fr": "PDG / auto-entrepreneur", "en": "Founder / self-employed" },
       "org": "Tech1up",
@@ -127,18 +166,19 @@
     }
   ],
   "edu": [
-	{
-	  "type": "edu",
-	  "slug": "cnam",
-	  "period": "2023 – Présent",
-	  "role": { "fr": "Ingénieur Systèmes Électroniques (en cours)", "en": "Electronic Systems Engineering (ongoing)" },
-	  "org": "CNAM",
-	  "where": { "fr": "Toulouse, FR", "en": "Toulouse, FR" }
-	},
     {
       "type": "edu",
-	  "slug": "dut-geii",
-      "sort": "2018-09-01",
+      "slug": "cnam",
+      "sort": "2023-09",
+      "period": "2023 – Présent",
+      "role": { "fr": "Ingénieur Systèmes Électroniques (en cours)", "en": "Electronic Systems Engineering (ongoing)" },
+      "org": "CNAM",
+      "where": { "fr": "Toulouse, FR", "en": "Toulouse, FR" }
+    },
+    {
+      "type": "edu",
+      "slug": "dut-geii",
+      "sort": "2018-09",
       "period": "2018 – 2021",
       "role": { "fr": "DUT GEII", "en": "DUT GEII" },
       "org": "IUT de Béthune",
@@ -146,8 +186,8 @@
     },
     {
       "type": "edu",
-	  "slug": "bts-snec",
-      "sort": "2017-09-01",
+      "slug": "bts-snec",
+      "sort": "2017-09",
       "period": "2017 – 2018",
       "role": { "fr": "BTS SNEC", "en": "BTS SNEC" },
       "org": "Lycée Ozanam",
@@ -155,8 +195,8 @@
     },
     {
       "type": "edu",
-	  "slug": "sti2d-itec",
-      "sort": "2014-09-01",
+      "slug": "sti2d-itec",
+      "sort": "2014-09",
       "period": "2014 – 2016",
       "role": { "fr": "BAC STI2D — ITEC", "en": "STI2D — ITEC (High School)" },
       "org": "Lycée Ozanam",
@@ -164,4 +204,3 @@
     }
   ]
 }
-

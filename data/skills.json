@@ -7,7 +7,7 @@
 "tools": [
     { "fr": "LabVIEW", "en": "LabVIEW", "href": "https://www.ni.com/fr-fr/shop/labview.html" },
     { "fr": "NI TestStand", "en": "NI TestStand", "href": "https://www.ni.com/fr-fr/shop/teststand.html" },
-    { "fr": "SEE Electrical", "en": "SEE Electrical", "href": "https://www.ige-xao.com/fr/produits/see-electrical/" },
+    { "fr": "SEE Electrical", "en": "SEE Electrical", "href": "https://www.ige-xao.com/en/us/see-electrical/" },
     { "fr": "KiCad (PCB)", "en": "KiCad (PCB)", "href": "https://www.kicad.org/" },
     { "fr": "SolidWorks (CAO)", "en": "SolidWorks (CAD)", "href": "https://www.solidworks.com/fr" }
   ],
@@ -26,6 +26,6 @@
     ]
   },
   "certifications": [
-    { "fr": "Habilitation électrique (B2V/H0v)", "en": "Electrical clearance (B2V/H0v)", "href": "https://travail-emploi.gouv.fr/formation-professionnelle/formation-professionnelle-des-salaries/article/habilitation-electrique" }
+    { "fr": "Habilitation électrique (B2V/H0v)", "en": "Electrical clearance (B2V/H0v)", "href": "https://www.cnfce.com/faq/habilitation-electrique/definition-habilitation-electrique" }
   ]
 }
